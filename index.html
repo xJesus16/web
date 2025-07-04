@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <!-- Metadatos básicos y título -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Treasure - Aventura Oficial</title>
+
+    <!-- Icono de la pestaña -->
+    <link rel="icon" href="imagenes/logo-de-empresa.png" type="image/png">
+
+    <!-- Tailwind CSS (framework CSS) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Cinzel para títulos, Inter para cuerpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon adicional con imagen personalizada -->
+    <link rel="icon" href="https://storage.googleapis.com/gemini-prod-us-west1-453303622405/uploaded/Imagen%20de%20WhatsApp%202025-07-03%20a%20las%2020.50.25_06b7a92c.jpg-9eec392a-d0ce-4aae-b79a-d2efb0f4f4e1" type="image/jpeg">
+
+    <!-- Estilos personalizados -->
+    <style>
+        /* Estilos base para el cuerpo y tipografías */
+        body {
+            background-color: #0c0a09; /* Tono de negro/café muy oscuro */
+            color: #e2e8f0; /* Color de texto principal (gris claro) */
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+        /* Fondo con gradiente y textura para la sección hero */
+        .hero-bg {
+            background-image: 
+                radial-gradient(circle at 50% 30%, rgba(39, 30, 20, 0.7), transparent 70%),
+                url('https://www.transparenttextures.com/patterns/dark-denim-3.png');
+            background-color: #1a1a1a;
+        }
+        /* Animación para revelar elementos al hacer scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Efecto de brillo sutil para logos y botones */
+        .glow-effect {
+            transition: all 0.3s ease-in-out;
+        }
+        .glow-effect:hover {
+            filter: drop-shadow(0 0 12px #f59e0b); /* Sombra ámbar/oro */
+        }
+        /* Estilo principal para botones */
+        .btn-primary {
+            background: linear-gradient(145deg, #f59e0b, #b45309);
+            color: white;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #f59e0b;
+            border-radius: 8px;
+            padding: 12px 28px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header fijo con navegación principal -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="header">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo de JAM -->
+            <a href="#" class="w-48 md:w-64">
+                <img src="imagenes/logo-de-empresa-mejorado.png" alt="Logo de JAM" class="glow-effect">
+            </a>
+
+            <!-- Logo del juego Dark Treasure -->
+            <a href="#" class="w-48 md:w-64">
+                <img src="imagenes/nombre-juego.png" alt="Logo de Dark Treasure " class="glow-effect">
+            </a>
+
+            <!-- Menú de navegación principal -->
+            <ul class="hidden md:flex space-x-8 text-lg font-cinzel">
+                <li><a href="#about" class="hover:text-amber-500 transition-colors">El Juego</a></li>
+                <li><a href="#features" class="hover:text-amber-500 transition-colors">Características</a></li>
+                <li><a href="#gallery" class="hover:text-amber-500 transition-colors">Galería</a></li>
+                <li><a href="#contact" class="hover:text-amber-500 transition-colors">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Hero con llamado a la acción principal -->
+    <main id="hero" class="hero-bg min-h-screen flex items-center justify-center pt-24">
+        <div class="text-center container mx-auto px-6">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white uppercase tracking-wider reveal visible">
+                El Misterio te Aguarda
+            </h1>
+            <p class="mt-6 mb-10 text-lg md:text-xl max-w-3xl mx-auto text-slate-300 reveal visible" style="transition-delay: 200ms;">
+Adéntrate en la enigmática Playa Misterio junto a Andru, quien al descubrir un antiguo objeto desatará un poder capaz de cambiarlo para siempre, transformándolo en alguien más allá de lo imaginable...            </p>
+            <a href="#"    class="btn-primary reveal visible" style="transition-delay: 400ms;">
+                ¡Descargar!
+            </a> 
+        </div>
+    </main>
+
+    <!-- Sección "Sobre el Juego" con texto e imagen -->
+    <section id="about" class="py-20 md:py-32 bg-stone-900">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <img src="imagenes/captura-de-pantalla2.png" alt="Imagen conceptual del juego" class="rounded-lg shadow-2xl w-full">
+            </div>
+            <div class="reveal">
+                <h2 class="text-4xl md:text-5xl font-bold text-amber-500 mb-6">Sumergete en las profundidades de la isla</h2>
+                <p class="mb-4 text-slate-300">
+Embárcate en una aventura épica con Dark Treasure, un juego de rol y acción que te sumerge en mundos virtuales repletos de peligros y maravillas.
+Explora playas encantadas, ruinas ancestrales y manglares cubiertos de misterio. Enfréntate a criaturas aterradoras mientras desentrañas los secretos de una antigua maldición que amenaza con devorarlo todo.                </p>
+                <p class="text-slate-300">
+                    Cada decisión cuenta. El camino que elijas, los aliados que hagas y los enemigos que derrotes darán forma a tu viaje único en este vasto mundo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "Características" principales del juego -->
+    <section id="features" class="py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 reveal">Características Principales</h2>
+            <p class="text-lg text-amber-500 mb-16 reveal">Lo que te espera en las sombras</p>
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Característica 1 -->
+                <div class="bg-stone-900 p-8 rounded-lg shadow-lg reveal border-t-4 border-amber-600">
+                  <img src="imagenes/mesa-de-trabajo.png" alt="Barco Nivel 1" class="w-auto h-auto max-w-full max-h-60 mx-auto">
+
+                    <h3 class="text-2xl font-bold text-white mb-4">3 Tipos de escenarios diferentes</h3>
+                    <p class="text-slate-400">Descubre diferentes escenarios con biomas diversos que van desde playa hasta manglares oscuros.</p>
+                </div>
+                <!-- Característica 2 -->
+                <div class="bg-stone-900 p-8 rounded-lg shadow-lg reveal border-t-4 border-amber-600" style="transition-delay: 200ms;">
+                  <img src="imagenes/captura-de-pantalla.png" alt="Menu" class="w-auto h-auto max-w-full max-h-60 mx-auto">
+                    <h3 class="text-2xl font-bold text-white mb-4">Menu Dinámico</h3>
+                    <p class="text-slate-400">Un menu sencillo pero dinamico, en el cual cuenta con apartados de jugar, nivelesd del juego, credito del juego y la opcion de salir al inicio de su laptop.</p>
+                </div>
+                <!-- Característica 3 -->
+                <div class="bg-stone-900 p-8 rounded-lg shadow-lg reveal border-t-4 border-amber-600" style="transition-delay: 400ms;">
+                  <img src="imagenes/captura-de-pantalla3.png" alt="Menu" class="w-auto h-auto max-w-full max-h-60 mx-auto">
+                    <h3 class="text-2xl font-bold text-white mb-4">HUD optimizado para una visualización más atractiva</h3>
+                    <p class="text-slate-400">Diseñado con una interfaz clara y estilizada que muestra la información esencial como vidas, puntuación y estado del jugador de forma intuitiva y atractiva.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <section id="gallery" class="py-20 md:py-32 bg-stone-900">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-white mb-16 reveal">Un Vistazo al Mundo</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      
+      <div class="reveal flex flex-col items-center">
+        <h3 class="text-white mb-2 font-semibold text-lg">Personaje Principal</h3>
+        <img src="imagenes/personaje-protagonista.png" alt="Personaje_Galeria1" 
+             class="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300 w-64 h-40 object-contain">
+      </div>
+      
+      <div class="reveal flex flex-col items-center">
+        <h3 class="text-white mb-2 font-semibold text-lg">Mascota</h3>
+        <img src="imagenes/mascota.png" alt="Galería 2" 
+             class="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300 w-64 h-40 object-contain">
+      </div>
+      
+      <div class="reveal flex flex-col items-center">
+        <h3 class="text-white mb-2 font-semibold text-lg">Enemigo Animal</h3>
+        <img src="imagenes/enemigo-animal.png" alt="Galería 3" 
+             class="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300 w-64 h-40 object-contain">
+      </div>
+      
+      <div class="reveal flex flex-col items-center">
+        <h3 class="text-white mb-2 font-semibold text-lg">Enemigo Momia</h3>
+        <img src="imagenes/animacion-de-la momia-Mesa-de-trabajo-1.png" alt="Galería Animación Momia" 
+             class="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300 w-64 h-40 object-contain">
+      </div>
+      
+      <div class="reveal flex flex-col items-center">
+        <h3 class="text-white mb-2 font-semibold text-lg">Jefe Final</h3>
+        <img src="imagenes/jefe-final.png" alt="Galería 4" 
+             class="rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300 w-64 h-40 object-contain">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Sección Footer con contacto y redes sociales -->
+    <footer id="contact" class="py-20 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-white mb-4 reveal">Sigue el Desarrollo</h2>
+            <p class="text-lg text-slate-300 mb-8 reveal">No te pierdas ninguna actualización. ¡Síguenos en nuestras redes!</p>
+            <div class="flex justify-center space-x-6 mb-12 reveal">
+                <!-- Iconos redes sociales -->
+                <a href="#" class="text-slate-400 hover:text-amber-500 transition-colors">
+                    <!-- Facebook SVG -->
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                </a>
+               <a href="#" class="text-slate-400 hover:text-amber-500 transition-colors" aria-label="X logo">
+  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19.09 4.41a1.13 1.13 0 0 0-1.6-.1L12 9.44 6.51 4.3a1.13 1.13 0 0 0-1.6 1.6L10.4 12l-5.48 6.09a1.13 1.13 0 1 0 1.6 1.6L12 14.56l5.49 5.73a1.13 1.13 0 0 0 1.6-1.6L13.6 12l5.49-6.09a1.13 1.13 0 0 0-.1-1.5z"/>
+  </svg>
+</a>
+
+                <a href="#" class="text-slate-400 hover:text-amber-500 transition-colors">
+                    <!-- Instagram SVG -->
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0-2a7 7 0 110 14 7 7 0 010-14zm4.5-1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+            <p class="text-sm text-slate-500 reveal">&copy; 2025 Dark Treasure. Todos los derechos reservados. Un juego de [JAM GAME STUDIOS  ].</p>
+        </div>
+    </footer>
+
+    <!-- Scripts para interacciones de UI -->
+    <script>
+        // --- Script para interacciones ---
+
+        // 1. Cambiar el fondo del header al hacer scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-stone-900/80', 'backdrop-blur-sm', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-stone-900/80', 'backdrop-blur-sm', 'shadow-lg');
+            }
+        });
+
+        // 2. Animación de aparición de elementos al hacer scroll con Intersection Observer
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1 // El elemento se revela cuando al menos el 10% es visible
+        });
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+        
+
+    </script>
+
+</body>
+</html>
